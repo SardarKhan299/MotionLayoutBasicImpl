@@ -22,6 +22,21 @@
                 motion:percentX="0.1"
                 motion:framePosition="10"
                 motion:motionTarget="@+id/button1"/>
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.1"
+                motion:framePosition="10"
+                motion:motionTarget="@+id/button2"/>
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.1"
+                motion:framePosition="10"
+                motion:motionTarget="@+id/button3"/>
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.1"
+                motion:framePosition="10"
+                motion:motionTarget="@+id/button4"/>
         </KeyFrameSet>
     </Transition>
 
@@ -30,7 +45,6 @@
             android:id="@+id/button"
             android:layout_width="64dp"
             android:layout_height="64dp"
-            android:layout_marginStart="8dp"
             motion:layout_constraintEnd_toEndOf="parent"
             motion:layout_constraintStart_toStartOf="parent"
             motion:layout_constraintTop_toTopOf="parent" >
@@ -83,7 +97,6 @@
             android:id="@+id/button">
             <Layout android:layout_width="64dp"
                 android:layout_height="64dp"
-                android:layout_marginEnd="8dp"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintBottom_toBottomOf="parent"/>
