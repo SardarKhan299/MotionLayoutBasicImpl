@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:duration="1000"
+        motion:motionInterpolator="linear">
+
+        <OnSwipe
+            motion:touchAnchorId="@+id/button"
+            motion:touchAnchorSide="bottom"
+            motion:dragDirection="dragDown"
+            motion:onTouchUp="decelerate"
+            />
+
+        <KeyFrameSet>
+            <KeyPosition
+                motion:keyPositionType="deltaRelative"
+                motion:percentX="0.1"
+                motion:framePosition="10"
+                motion:motionTarget="@+id/button1"/>
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/button"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="8dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" >
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/button1">
+            <Motion motion:pathMotionArc="startHorizontal"/>
+            <Layout android:layout_width="30dp"
+                android:layout_height="50dp"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/button2">
+            <Motion motion:pathMotionArc="startHorizontal"/>
+            <Layout android:layout_width="30dp"
+                android:layout_height="50dp"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toBottomOf="@+id/button1"
+                />
+        </Constraint>
+
+
+        <Constraint
+            android:id="@+id/button3">
+            <Motion motion:pathMotionArc="startHorizontal"/>
+            <Layout android:layout_width="30dp"
+                android:layout_height="50dp"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toTopOf="parent"
+                />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/button4">
+            <Motion motion:pathMotionArc="startHorizontal"/>
+            <Layout android:layout_width="30dp"
+                android:layout_height="50dp"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintTop_toBottomOf="@+id/button3"
+                />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/button">
+            <Layout android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="8dp"
+                motion:layout_constraintStart_toStartOf="parent"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintBottom_toBottomOf="parent"/>
+        </Constraint>
+
+    </ConstraintSet>
+</MotionScene>
