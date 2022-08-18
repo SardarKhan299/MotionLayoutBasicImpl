@@ -43,11 +43,14 @@
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@+id/button"
-            android:layout_width="64dp"
-            android:layout_height="64dp"
-            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="@dimen/zip_width"
+            android:layout_height="@dimen/zip_height"
             motion:layout_constraintStart_toStartOf="parent"
-            motion:layout_constraintTop_toTopOf="parent" >
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintHorizontal_bias="0.48"
+            android:layout_marginRight="0dp"
+            android:layout_marginEnd="0dp">
         </Constraint>
     </ConstraintSet>
 
@@ -55,8 +58,9 @@
         <Constraint
             android:id="@+id/button1">
             <Motion motion:pathMotionArc="startHorizontal"/>
-            <Layout android:layout_width="30dp"
-                android:layout_height="50dp"
+            <Layout
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintTop_toTopOf="parent"
                 />
@@ -65,8 +69,8 @@
         <Constraint
             android:id="@+id/button2">
             <Motion motion:pathMotionArc="startHorizontal"/>
-            <Layout android:layout_width="30dp"
-                android:layout_height="50dp"
+            <Layout android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintTop_toBottomOf="@+id/button1"
                 />
@@ -74,10 +78,49 @@
 
 
         <Constraint
+            android:id="@+id/button7">
+            <Motion motion:pathMotionArc="startHorizontal"/>
+            <Layout android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toBottomOf="@+id/button2"
+                />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/button7">
+            <Motion motion:pathMotionArc="startHorizontal"/>
+            <Layout android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toBottomOf="@+id/button2"
+                />
+        </Constraint>
+        <Constraint
+            android:id="@+id/button8">
+            <Motion motion:pathMotionArc="startHorizontal"/>
+            <Layout android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toBottomOf="@+id/button7"
+                />
+        </Constraint>
+        <Constraint
+            android:id="@+id/button9">
+            <Motion motion:pathMotionArc="startHorizontal"/>
+            <Layout android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                motion:layout_constraintEnd_toEndOf="parent"
+                motion:layout_constraintTop_toBottomOf="@+id/button8"
+                />
+        </Constraint>
+
+        <Constraint
             android:id="@+id/button3">
             <Motion motion:pathMotionArc="startHorizontal"/>
-            <Layout android:layout_width="30dp"
-                android:layout_height="50dp"
+            <Layout
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintTop_toTopOf="parent"
                 />
@@ -86,8 +129,8 @@
         <Constraint
             android:id="@+id/button4">
             <Motion motion:pathMotionArc="startHorizontal"/>
-            <Layout android:layout_width="30dp"
-                android:layout_height="50dp"
+            <Layout android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintTop_toBottomOf="@+id/button3"
                 />
@@ -95,8 +138,9 @@
 
         <Constraint
             android:id="@+id/button">
-            <Layout android:layout_width="64dp"
-                android:layout_height="64dp"
+            <Layout
+                android:layout_width="@dimen/zip_width"
+                android:layout_height="@dimen/zip_height"
                 motion:layout_constraintStart_toStartOf="parent"
                 motion:layout_constraintEnd_toEndOf="parent"
                 motion:layout_constraintBottom_toBottomOf="parent"/>
